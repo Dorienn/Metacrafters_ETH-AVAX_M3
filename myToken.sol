@@ -22,7 +22,7 @@ contract MyToken is ERC20, ERC20Burnable, Ownable {
        transferFrom(msg.sender, _address, _value);
     } 
  
-    function burntok(uint _value) external { 
+    function burnToken(uint _value) external { 
         require(balanceOf(msg.sender) >= _value, "You do not have enough KOINS.");
         burn(_value);
     }
